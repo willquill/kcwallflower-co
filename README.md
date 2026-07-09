@@ -9,17 +9,24 @@ Static site, no build step. Hosted on **GitHub Pages** at
 ## Structure
 
 ```
-index.html        Single-page site
-css/style.css     Styles
-assets/           Favicon + (your) photos
-CNAME             Custom domain for GitHub Pages
+index.html        Tabbed chooser — switch between the design options
+original/          Design option: the original full site (css + assets self-contained)
+a/                 Design option A — "Heirloom"
+b/                 Design option B — "Garden Press"
+c/                 Design option C — "Field & Table"
+css/ , assets/     Styles + favicon for the original design
+CNAME              Custom domain for GitHub Pages
 ```
+
+Once a design is chosen, promote that folder's `index.html` (and any assets) to
+the repo root and drop the chooser + the other options.
 
 ## Editing content
 
 - **Text / copy** — edit `index.html`.
 - **Colors / fonts** — the palette lives in the `:root` block at the top of `css/style.css`.
-- **Email** — currently `hello@kcwallflower.co`; find & replace to change it.
+- **Contact** — Instagram DM only (no email set up yet). Contact links point to
+  [@kcwallflower.co](https://instagram.com/kcwallflower.co).
 
 ## Adding real photos
 
