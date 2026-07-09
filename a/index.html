@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>KC Wallflower — Heirloom · Variant A</title>
+<meta name="description" content="Vintage tableware rentals & garden consulting in Kansas City." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&family=Tangerine:wght@700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --cream:#faf6ee; --cream2:#f2ebdc; --ink:#3d3a32; --soft:#726c5b;
+    --terra:#b0603f; --sage:#869072; --sage-d:#5c674c; --line:#ddd2ba;
+    --disp:"Cormorant Garamond",serif; --body:"Jost",sans-serif; --script:"Tangerine",cursive;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--body);font-weight:300;color:var(--ink);background:var(--cream);line-height:1.75;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:var(--disp);font-weight:500;line-height:1.08}
+  a{color:inherit;text-decoration:none}
+  .badge{position:fixed;top:12px;left:12px;z-index:99;background:var(--ink);color:var(--cream);font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;padding:.4em .9em;border-radius:40px}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 clamp(1.2rem,5vw,2rem)}
+  /* nav */
+  .nav{position:absolute;top:0;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:1.6rem clamp(1.2rem,5vw,2.6rem)}
+  .nav a.brand{font-family:var(--disp);font-size:1.5rem;font-weight:600;letter-spacing:.02em}
+  .nav .links{display:flex;gap:1.8rem;font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--soft)}
+  /* hero */
+  .hero{min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;padding:6rem 1.4rem;position:relative;background:radial-gradient(120% 80% at 50% 10%,#fdfaf3,var(--cream2))}
+  .frame{border:1px solid var(--terra);padding:clamp(2.4rem,6vw,4.5rem) clamp(1.6rem,6vw,4rem);max-width:640px;position:relative}
+  .frame::before,.frame::after{content:"❧";position:absolute;color:var(--terra);font-size:1.4rem;left:50%;transform:translateX(-50%)}
+  .frame::before{top:-.9rem;background:var(--cream);padding:0 .6rem}
+  .frame::after{bottom:-1.1rem;background:var(--cream);padding:0 .6rem;transform:translateX(-50%) rotate(180deg)}
+  .eyebrow{font-size:.72rem;letter-spacing:.34em;text-transform:uppercase;color:var(--terra);margin-bottom:1.4rem}
+  .hero h1{font-size:clamp(3rem,10vw,6rem);letter-spacing:.01em}
+  .script{font-family:var(--script);font-size:clamp(2.6rem,8vw,4rem);color:var(--terra);line-height:.7;margin:.3rem 0 1.4rem}
+  .hero p.lede{font-family:var(--disp);font-size:clamp(1.2rem,2.4vw,1.5rem);font-style:italic;color:var(--soft);max-width:34ch;margin:0 auto 2rem}
+  .btn{display:inline-block;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;padding:.9em 2em;border:1px solid var(--sage-d);color:var(--sage-d);transition:.35s}
+  .btn:hover{background:var(--sage-d);color:var(--cream)}
+  .btn.solid{background:var(--terra);border-color:var(--terra);color:var(--cream)}
+  .btn.solid:hover{background:var(--ink);border-color:var(--ink)}
+  /* section */
+  section.block{padding:clamp(4rem,9vw,7rem) 0}
+  .head{text-align:center;max-width:600px;margin:0 auto clamp(2.6rem,5vw,3.6rem)}
+  .head h2{font-size:clamp(2rem,4.6vw,3.2rem)}
+  .head .eyebrow{margin-bottom:.9rem}
+  .rule{width:60px;height:1px;background:var(--terra);margin:1.2rem auto}
+  /* rentals list */
+  .list{max-width:760px;margin:0 auto;border-top:1px solid var(--line)}
+  .item{display:grid;grid-template-columns:64px 1fr;gap:1.4rem;padding:1.5rem .4rem;border-bottom:1px solid var(--line);align-items:baseline;transition:.3s}
+  .item:hover{background:#fbf7ef;padding-left:1rem}
+  .num{font-family:var(--disp);font-size:1.7rem;color:var(--terra)}
+  .item h3{font-size:1.5rem;margin-bottom:.1rem}
+  .item p{color:var(--soft);font-size:.96rem}
+  /* garden */
+  .garden{background:var(--sage-d);color:var(--cream)}
+  .garden .head h2,.garden .head .eyebrow{color:var(--cream)}
+  .garden .eyebrow{color:#e8dcc4}
+  .gcols{display:grid;grid-template-columns:1fr 1fr;gap:2rem;max-width:760px;margin:0 auto}
+  .gcols h3{font-family:var(--disp);font-size:1.6rem;margin-bottom:.4rem;color:#fdf8ee}
+  .gcols p{color:#e2ddd0;font-size:.98rem}
+  .tags{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;max-width:640px;margin:2.4rem auto 0}
+  .tags span{font-size:.74rem;letter-spacing:.06em;border:1px solid rgba(250,246,238,.4);padding:.34em .9em;border-radius:40px;color:#f0ebe0}
+  /* inquire */
+  .inquire{text-align:center}
+  .inquire h2{font-size:clamp(2rem,5vw,3.2rem)}
+  .inquire p{color:var(--soft);max-width:38ch;margin:1rem auto 2rem}
+  /* footer */
+  footer{text-align:center;padding:3rem 1.4rem;border-top:1px solid var(--line);color:var(--soft);font-size:.82rem;letter-spacing:.08em}
+  footer .fb{font-family:var(--disp);font-size:1.5rem;color:var(--ink);margin-bottom:.6rem}
+  @media(max-width:640px){.nav .links{display:none}.gcols{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="badge">Variant A · Heirloom</div>
+<div class="hero">
+  <div class="nav wrap" style="max-width:none">
+    <a href="#" class="brand">KC Wallflower</a>
+    <div class="links"><a href="#rentals">Rentals</a><a href="#garden">Garden</a><a href="#inquire">Inquire</a></div>
+  </div>
+  <div class="frame">
+    <p class="eyebrow">Kansas City</p>
+    <h1>KC Wallflower</h1>
+    <p class="script">gather beautifully</p>
+    <p class="lede">Vintage tableware for weddings &amp; gatherings, and thoughtful garden consulting for a beautiful, well-fed home.</p>
+    <a href="#rentals" class="btn solid">Browse the collection</a>
+  </div>
+</div>
+
+<section class="block" id="rentals">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">The Rental Collection</p>
+      <h2>Vintage tableware, gathered over time</h2>
+      <div class="rule"></div>
+      <p style="color:var(--soft)">Rented by the piece or styled together — delivery, styling &amp; pickup across the KC metro.</p>
+    </div>
+    <div class="list">
+      <div class="item"><span class="num">01</span><div><h3>Lanterns</h3><p>Candlelight and warm glow for tablescapes, aisles, and evening receptions.</p></div></div>
+      <div class="item"><span class="num">02</span><div><h3>Vases &amp; Vessels</h3><p>Milk glass, amber, cut crystal, and stoneware for florals big and small.</p></div></div>
+      <div class="item"><span class="num">03</span><div><h3>Glassware</h3><p>Coupes, goblets, and etched glasses for water, wine, and a good toast.</p></div></div>
+      <div class="item"><span class="num">04</span><div><h3>Serving Dishes</h3><p>Platters, compotes, and footed bowls that bring the whole table together.</p></div></div>
+      <div class="item"><span class="num">05</span><div><h3>Serving Utensils</h3><p>Vintage silver spoons, forks, and ladles with a bit of patina and history.</p></div></div>
+      <div class="item"><span class="num">06</span><div><h3>Tables &amp; Linens</h3><p>Folding tables dressed in vintage tablecloths — instant charm, no fuss.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="block garden" id="garden">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Garden Consulting</p>
+      <h2>A garden that feeds you — and looks the part</h2>
+    </div>
+    <div class="gcols">
+      <div><h3>Aesthetics &amp; design</h3><p>Layout, color, and seasonal interest — layered borders and cutting flowers that look intentional from spring to frost.</p></div>
+      <div><h3>Growing food</h3><p>Kitchen gardens to feed a family: tomatoes, peppers, squash, beans, greens, herbs, and berries — the reliable Midwest growers.</p></div>
+    </div>
+    <div class="tags"><span>Tomatoes</span><span>Peppers</span><span>Squash</span><span>Beans</span><span>Greens</span><span>Herbs</span><span>Berries</span><span>Cut flowers</span></div>
+  </div>
+</section>
+
+<section class="block inquire" id="inquire">
+  <div class="wrap">
+    <p class="eyebrow">Let's gather</p>
+    <h2>Tell us about your event or your garden</h2>
+    <p>The easiest way to reach us is a DM on Instagram — send your date, your vision, and a rough headcount.</p>
+    <a class="btn solid" href="https://instagram.com/kcwallflower.co" target="_blank" rel="noopener">Message @kcwallflower.co</a>
+  </div>
+</section>
+
+<footer>
+  <div class="fb">KC Wallflower</div>
+  <div>Kansas City, MO · @kcwallflower.co · hello@kcwallflower.co</div>
+</footer>
+</body>
+</html>
