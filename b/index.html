@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>KC Wallflower — Garden Press · Variant B</title>
+<title>kcwallflower.co — Garden Press · Variant B</title>
 <meta name="description" content="Vintage tableware rentals & garden consulting in Kansas City." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,7 +16,7 @@
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{font-family:var(--body);font-weight:300;color:var(--ink);background:var(--paper);line-height:1.7;-webkit-font-smoothing:antialiased}
+  body{font-family:var(--body);font-weight:300;color:var(--ink);background:var(--paper);line-height:1.7;-webkit-font-smoothing:antialiased;padding-top:36px}
   h1,h2,h3{font-family:var(--disp);font-weight:500;line-height:1.02;letter-spacing:-.01em}
   a{color:inherit;text-decoration:none}
   .badge{position:fixed;top:12px;right:12px;z-index:99;background:var(--ink);color:var(--paper);font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;padding:.4em .9em;border-radius:2px}
@@ -45,7 +45,7 @@
   .sec-head h2{font-size:clamp(1.8rem,4vw,2.8rem)}
   .sec-head span{font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--soft)}
   .rgrid{display:grid;grid-template-columns:repeat(2,1fr)}
-  .r{padding:1.8rem 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:38px 1fr;gap:1rem}
+  .r{padding:1.8rem 0;border-bottom:1px solid var(--line)}
   .r:nth-child(odd){padding-right:2.4rem}
   .r:nth-child(even){padding-left:2.4rem;border-left:1px solid var(--line)}
   .r .k{font-family:var(--disp);color:var(--olive);font-size:1rem}
@@ -60,9 +60,9 @@
   .split .two p{font-size:.9rem;color:var(--soft)}
   .split ul{list-style:none;display:flex;flex-wrap:wrap;gap:.4rem}
   .split li{font-size:.76rem;color:var(--olive-d);border:1px solid var(--line);padding:.3em .8em;border-radius:2px}
-  .panel{background:var(--olive-d);color:var(--paper);aspect-ratio:4/5;display:flex;flex-direction:column;justify-content:space-between;padding:2rem}
-  .panel .t{font-family:var(--disp);font-size:clamp(1.6rem,3vw,2.4rem);font-style:italic}
-  .panel .lab{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;opacity:.7}
+  .panel{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--olive-d);border-radius:2px}
+  .panel img{width:100%;height:100%;object-fit:cover;display:block}
+  .panel figcaption{position:absolute;left:0;right:0;bottom:0;padding:1.4rem;color:#fff;font-family:var(--disp);font-style:italic;font-size:clamp(1.2rem,2vw,1.5rem);background:linear-gradient(transparent,rgba(20,20,16,.78))}
   /* inquire */
   .cta{border-top:1px solid var(--ink);text-align:center;padding-top:clamp(3rem,7vw,5rem)}
   .cta h2{font-size:clamp(2.2rem,6vw,4rem)}
@@ -73,8 +73,9 @@
 </style>
 </head>
 <body>
+<div style="position:fixed;top:0;left:0;right:0;z-index:9999;background:#20201c;color:#f4efe4;text-align:center;font:600 12px/36px system-ui,-apple-system,'Segoe UI',sans-serif;letter-spacing:.14em;text-transform:uppercase;height:36px">Work in progress · draft site — design not final</div>
 <div class="nav">
-  <a href="#" class="brand">KC Wallflower</a>
+  <a href="#" class="brand">kcwallflower.co</a>
   <div class="links"><a href="#rentals">Rentals</a><a href="#garden">Garden</a><a href="#inquire">Inquire</a></div>
 </div>
 
@@ -98,12 +99,12 @@
 <section id="rentals"><div class="wrap">
   <div class="sec-head"><h2>The Collection</h2><span>Vintage tableware</span></div>
   <div class="rgrid">
-    <div class="r"><span class="k">01</span><div><h3>Lanterns</h3><p>Candlelight for tablescapes, aisles, and evening receptions.</p></div></div>
-    <div class="r"><span class="k">02</span><div><h3>Vases &amp; Vessels</h3><p>Milk glass, amber, cut crystal, and stoneware for florals.</p></div></div>
-    <div class="r"><span class="k">03</span><div><h3>Glassware</h3><p>Coupes, goblets, and etched glasses for a good toast.</p></div></div>
-    <div class="r"><span class="k">04</span><div><h3>Serving Dishes</h3><p>Platters, compotes, and footed bowls for the table.</p></div></div>
-    <div class="r"><span class="k">05</span><div><h3>Serving Utensils</h3><p>Vintage silver spoons, forks, and ladles with patina.</p></div></div>
-    <div class="r"><span class="k">06</span><div><h3>Tables &amp; Linens</h3><p>Folding tables dressed in vintage tablecloths.</p></div></div>
+    <div class="r"><div><h3>Lanterns</h3><p>Candlelight for tablescapes, aisles, and evening receptions.</p></div></div>
+    <div class="r"><div><h3>Vases &amp; Vessels</h3><p>Milk glass, amber, cut crystal, and stoneware for florals.</p></div></div>
+    <div class="r"><div><h3>Glassware</h3><p>Coupes, goblets, and etched glasses for a good toast.</p></div></div>
+    <div class="r"><div><h3>Serving Dishes</h3><p>Platters, compotes, and footed bowls for the table.</p></div></div>
+    <div class="r"><div><h3>Serving Utensils</h3><p>Vintage silver spoons, forks, and ladles with patina.</p></div></div>
+    <div class="r"><div><h3>Tables &amp; Linens</h3><p>Folding tables dressed in vintage tablecloths.</p></div></div>
   </div>
 </div></section>
 
@@ -117,13 +118,12 @@
         <div><h3>Aesthetics</h3><p>Layout, color, structure, and seasonal interest from spring to frost.</p></div>
         <div><h3>Growing food</h3><p>Kitchen gardens to feed a family — the reliable Midwest growers.</p></div>
       </div>
-      <ul><li>Tomatoes</li><li>Peppers</li><li>Squash</li><li>Beans</li><li>Greens</li><li>Herbs</li><li>Berries</li><li>Cut flowers</li></ul>
+      <ul><li>Asparagus</li><li>Tomatoes</li><li>Peppers</li><li>Squash</li><li>Beans</li><li>Greens</li><li>Herbs</li><li>Berries</li><li>Cut flowers</li></ul>
     </div>
-    <div class="panel">
-      <span class="lab">No. 02 — Consulting</span>
-      <span class="t">Grow something<br>worth eating.</span>
-      <span class="lab">Kansas City</span>
-    </div>
+    <figure class="panel">
+      <img src="assets/garden.jpg" alt="A raised-bed kitchen garden full of homegrown vegetables" loading="lazy" />
+      <figcaption>Grow something worth eating.</figcaption>
+    </figure>
   </div>
 </div></section>
 
@@ -136,7 +136,7 @@
 </div></section>
 
 <div class="wrap"><footer>
-  <span>KC Wallflower — vintage rentals &amp; garden consulting</span>
+  <span>kcwallflower.co — vintage rentals &amp; garden consulting</span>
   <span>@kcwallflower.co · Kansas City, MO</span>
 </footer></div>
 </body>
